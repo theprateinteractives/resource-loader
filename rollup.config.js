@@ -8,11 +8,11 @@ export default [
 	// builds from a single configuration where possible, using
 	// the `targets` option which can specify `dest` and `format`)
 	{
-		entry: 'src/main.js',
+		input: 'src/main.js',
 		external: ['unfetch'],
-		targets: [
-			{ dest: pkg.main, format: 'cjs' },
-			{ dest: pkg.module, format: 'es' }
+		output: [
+			{ file: pkg.main, format: 'cjs' },
+			{ file: pkg.module, format: 'es' }
 		],
 		plugins: [
 			buble({

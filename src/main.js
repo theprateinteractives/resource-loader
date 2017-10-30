@@ -27,16 +27,16 @@ function loadResources(resources) {
 		},
 		body: JSON.stringify({
 			query: `
-query AllResources {
-	${generateRequestsForIds(Object.values(resources))}
-}
-fragment ImageBits on MultimediaImage {
-	resourceName
-	creditTitle
-	creditUrl
-	width
-	height
-}
+				query AllResources {
+					${generateRequestsForIds(Object.values(resources))}
+				}
+				fragment ImageBits on MultimediaImage {
+					resourceName
+					creditTitle
+					creditUrl
+					width
+					height
+				}
 			`
 		})
 	})
